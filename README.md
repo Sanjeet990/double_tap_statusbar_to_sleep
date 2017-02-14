@@ -11,16 +11,20 @@ Decompile your SystemUI.apk. Download the content of this project and extract so
 
 Now add double tap to statusbar. For this open SystemUI.apk/res/layouts/status_bar.xml just after the root element place this:
 
+```
 <com.android.systemui.DLock android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+```
 
-Now it would looking like:
+Now it would look like:
 
+```
 <?xml version="1.0" encoding="utf-8"?>
 <com.android.systemui.statusbar.phone.PhoneStatusBarView android:orientation="vertical" android:id="@id/msim_status_bar" android:background="@drawable/system_bar_background" android:focusable="true" android:descendantFocusability="afterDescendants"
   xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:systemui="http://schemas.android.com/apk/res/com.android.systemui">
     <com.android.systemui.DLock android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
     
+```
 
 For Settings
 ----------------------------------
