@@ -2,6 +2,7 @@
 
 The mod enables you to implement double tap to sleep statusbar mod in any Operating system greater than GB.
 
+
 # How to add this to my ROM
 
 For statusbar
@@ -22,8 +23,7 @@ Now it would look like:
 <com.android.systemui.statusbar.phone.PhoneStatusBarView android:orientation="vertical" android:id="@id/msim_status_bar" android:background="@drawable/system_bar_background" android:focusable="true" android:descendantFocusability="afterDescendants"
   xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:systemui="http://schemas.android.com/apk/res/com.android.systemui">
-    <com.android.systemui.DLock android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" />
-    
+    <com.android.systemui.DLock android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" /> 
 ```
 
 For Settings
@@ -35,7 +35,9 @@ Decompile your Settings.apk. Download the content of this project and extract so
 
 Open Settings.apk/res/xml/display.xml and add
 
+```
 <com.android.settings.gravity.SystemSwitchPreference android:title="Double tap status bar to sleep" android:key="double_tap_sb_sleep" android:summary="Double tapping the status bar makes the device sleep" android:defaultValue="true" />
+```
 
 Compile both the APKs and push to your phone.
 
